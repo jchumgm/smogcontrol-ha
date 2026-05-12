@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 from datetime import timedelta
 
 from homeassistant.config_entries import ConfigEntry
@@ -16,6 +17,8 @@ from .const import (
     DOMAIN,
     MIN_SCAN_INTERVAL,
 )
+
+_LOGGER = logging.getLogger(__name__)
 
 
 class SmogControlDataUpdateCoordinator(DataUpdateCoordinator[dict]):
@@ -39,7 +42,7 @@ class SmogControlDataUpdateCoordinator(DataUpdateCoordinator[dict]):
 
         super().__init__(
             hass,
-            logger=DOMAIN,
+            logger=_LOGGER,
             name=f"{DOMAIN}_{sensor_id}",
             update_interval=timedelta(minutes=scan_interval),
         )
