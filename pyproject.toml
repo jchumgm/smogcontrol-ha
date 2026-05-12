@@ -1,0 +1,31 @@
+[project]
+name = "smogcontrol-ha"
+version = "0.1.0"
+description = "Home Assistant integration for Smog Control air quality sensors"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest-homeassistant-custom-component==0.13.121",
+    "aioresponses==0.7.6",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+select = ["ALL"]
+ignore = [
+    "ANN401",
+    "D203",
+    "D213",
+    "PLR0913",
+]
+
+[tool.ruff.isort]
+known-first-party = ["custom_components"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

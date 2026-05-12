@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Smog Control",
+        "description": "Enter your Smog Control sensor ID. You can find it on the Smog Control map at https://smogcontrol.pl/mapa/smog.html",
+        "data": {
+          "sensor_id": "Sensor ID"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor": "Invalid sensor ID or sensor not found",
+      "cannot_connect": "Failed to connect to Smog Control API",
+      "unknown": "An unknown error occurred"
+    },
+    "abort": {
+      "already_configured": "This sensor is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure Smog Control",
+        "description": "Adjust the update interval for this sensor",
+        "data": {
+          "scan_interval": "Scan interval (minutes)"
+        }
+      }
+    },
+    "error": {
+      "invalid_interval": "Scan interval must be between 5 and 60 minutes"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pm1": {
+        "name": "PM1"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "temperature": {
+        "name": "Temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "pressure": {
+        "name": "Pressure"
+      },
+      "air_info": {
+        "name": "Air condition"
+      }
+    }
+  }
+}

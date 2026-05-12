@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Konfiguracja Smog Control",
+        "description": "Podaj ID czujnika Smog Control. Możesz je znaleźć na mapie Smog Control pod adresem https://smogcontrol.pl/mapa/smog.html",
+        "data": {
+          "sensor_id": "ID czujnika"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor": "Nieprawidłowe ID czujnika lub czujnik nie został znaleziony",
+      "cannot_connect": "Nie udało się połączyć z API Smog Control",
+      "unknown": "Wystąpił nieznany błąd"
+    },
+    "abort": {
+      "already_configured": "Ten czujnik jest już skonfigurowany"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Konfiguracja Smog Control",
+        "description": "Dostosuj interwał aktualizacji dla tego czujnika",
+        "data": {
+          "scan_interval": "Interwał skanowania (minuty)"
+        }
+      }
+    },
+    "error": {
+      "invalid_interval": "Interwał skanowania musi wynosić od 5 do 60 minut"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pm1": {
+        "name": "PM1"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "temperature": {
+        "name": "Temperatura"
+      },
+      "humidity": {
+        "name": "Wilgotność"
+      },
+      "pressure": {
+        "name": "Ciśnienie"
+      },
+      "air_info": {
+        "name": "Stan powietrza"
+      }
+    }
+  }
+}
